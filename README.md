@@ -56,7 +56,7 @@ cp .env.example .env
 ```bash
 cd backend
 npm install
-npm start
+node index.js
 ```
 
 ### Running the Frontend
