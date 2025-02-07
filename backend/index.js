@@ -1,8 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import { PORT } from './secret.js';
-import rootRouter from './routes/index.js';
-import { notFound, globalErrhandler } from './middlewares/globalErrHandler.js';
+const express = require('express');
+const cors = require('cors');
+const { PORT } = require('./secret');
+const rootRouter = require('./routes/index');
+const { notFound, globalErrhandler } = require('./middlewares/globalErrHandler');
+
 
 const app = express();
 

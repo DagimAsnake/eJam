@@ -16,7 +16,7 @@ const validateSuperHero = (name, super_power, humility_score) => {
 };
 
 // POST /superheroes - Add a new superhero
-export const addSuperHero = async (req, res) => {
+exports.addSuperHero = async (req, res) => {
   const { name, super_power, humility_score } = req.body;
 
   const error = validateSuperHero(name, super_power, humility_score);
@@ -34,7 +34,7 @@ export const addSuperHero = async (req, res) => {
 };
 
 // GET /superheroes - Fetch superheroes sorted by humility score
-export const getSuperHero = async (req, res) => {
+exports.getSuperHero = async (req, res) => {
   try {
     const sortedSuperheroes = superheroes.sort(
       (a, b) => b.humility_score - a.humility_score

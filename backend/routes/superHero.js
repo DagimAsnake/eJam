@@ -1,12 +1,9 @@
-import express from 'express';
-import {
-  addSuperHero,
-  getSuperHero,
-} from '../controllers/superHero.js';
+const express = require('express');
+const { addSuperHero, getSuperHero } =  require('../controllers/superHero');
 
 const superHeroRoutes = express.Router();
 
 superHeroRoutes.post('/', addSuperHero);
 superHeroRoutes.get('/', getSuperHero);
 
-export default superHeroRoutes;
+module.exports = superHeroRoutes;

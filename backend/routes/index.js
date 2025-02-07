@@ -1,8 +1,8 @@
-import express from 'express';
-import superHeroRoutes from './superHero.js';
+const express = require('express');
+const superHeroRoutes = require('./superHero');
 
 const rootRouter = express.Router();
 
 rootRouter.use('/superheroes', superHeroRoutes);
 
-export default rootRouter;
+module.exports = rootRouter;
